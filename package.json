@@ -1,6 +1,6 @@
 {
     "name": "@seiry/homebridge-esphome-ts",
-    "version": "2.1.0",
+    "version": "2.5.0",
     "description": "New plugin for integrating for esphome into homebridge",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -41,8 +41,7 @@
     "files": [
         "dist",
         "config.schema.json"
-    ],
-    "keywords": [
+    ],    "keywords": [
         "homebridge",
         "esphome",
         "homebridge-plugin"
