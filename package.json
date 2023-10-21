@@ -20,7 +20,6 @@
     "tsup": {
         "entry": [
             "src/index.ts"
-
         ],
         "treeshake": true,
         "sourcemap": "inline",
@@ -41,7 +40,8 @@
     "files": [
         "dist",
         "config.schema.json"
-    ],    "keywords": [
+    ],
+    "keywords": [
         "homebridge",
         "esphome",
         "homebridge-plugin"
@@ -55,7 +55,7 @@
     "dependencies": {
         "bonjour-hap": "3.6.3",
         "color-convert": "2.0.1",
-        "esphome-ts": "3.3.1",
+        "esphome-ts": "git+https://github.com/tomtaylor/esphome-ts.git#e7ac67009dd8e968dbc718b71c1f38bb604c37e6",
         "rxjs": "7.8.1"
     },
     "devDependencies": {

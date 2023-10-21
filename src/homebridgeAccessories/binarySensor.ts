@@ -8,12 +8,15 @@ type SupportedServices =
     | typeof Service.MotionSensor
     | typeof Service.LeakSensor
     | typeof Service.ContactSensor
-    | typeof Service.SmokeSensor;
+    | typeof Service.SmokeSensor
+    | typeof Service.Doorbell;
+
 type SupportedCharacteristics =
     | typeof Characteristic.MotionDetected
     | typeof Characteristic.ContactSensorState
     | typeof Characteristic.SmokeDetected
-    | typeof Characteristic.LeakDetected;
+    | typeof Characteristic.LeakDetected
+    | typeof Characteristic.ProgrammableSwitchEvent;
 
 interface BinarySensorHomekit {
     characteristic: SupportedCharacteristics;
@@ -55,6 +58,13 @@ const map = (): Map<BinarySensorTypes, BinarySensorHomekit> => {
             {
                 characteristic: Characteristic.LeakDetected,
                 service: Service.LeakSensor,
+            },
+        ],
+        [
+            BinarySensorTypes.DOORBELL,
+            {
+                characteristic: Characteristic.ProgrammableSwitchEvent,
+                service: Service.Doorbell,
             },
         ],
     ]);
